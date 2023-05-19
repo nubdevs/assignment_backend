@@ -2,6 +2,7 @@ const express = require("express");
 const connectDB = require("./config/dbConnect");
 const cors = require("cors");
 const nsRouter = require("./routes/nsRoute");
+const crRouter = require("./routes/callRoute")
 
 
 require("dotenv").config();
@@ -20,7 +21,8 @@ app.use(cors());
 const client = connectDB();
 console.log(client, "ok");
 //-------------------------------------end Points-----------------------
-app.use("/api", nsRouter);
+app.use("/ns", nsRouter);
+app.use("/cr",crRouter)
 
 
 

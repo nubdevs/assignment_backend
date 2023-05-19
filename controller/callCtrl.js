@@ -1,10 +1,10 @@
-const Gas = require("../models/nsModel");
+const Record = require("../models/callModel");
 
 
 
 const getAllData=async(req,res)=>{
     try{
-        const result = await Gas.find({})
+        const result = await Record.find({})
         res.status(200).send(result)
     }catch(error){
         res.status(500).send(error)
@@ -39,5 +39,5 @@ const filterData=async(req,res)=>{
 
 module.exports = {
 getAllData,
-filterData,
+filterData
 };

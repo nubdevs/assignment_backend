@@ -1,7 +1,7 @@
 const express = require("express");
 const {
   getAllData,filterData
-} = require("../controller/nsCtrl");
+} = require("../controller/callCtrl");
 // const { authMiddleware, isAdmin } = require("../middlewares/authMiddleware");
 const router = express.Router();
 router.get("/", getAllData);
