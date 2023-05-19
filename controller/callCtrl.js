@@ -13,7 +13,7 @@ const getAllData=async(req,res)=>{
 
 const filterData=async(req,res)=>{
     try {
-        const result = await CallRecord
+        const result = await Record
           .where("callDateFrom")
           .eq(req.body.query.callDateFrom)
           .where("callDateTo")
